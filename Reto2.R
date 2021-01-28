@@ -33,4 +33,12 @@ sueldos <- as.numeric(sueldos)
 # 4. Ahora podrás responder esta pregunta ¿Cuál es la empresa que más paga y 
 #    la que menos paga?
 result <- cbind(tabla, sueldos)
-result[max.sueldos,]
+result
+# Sueldo más alto
+max.sueldo <- which.max(result$sueldos)
+result[max.sueldo,]
+
+# Sueldo más bajo
+min.sueldo <- which.min(result$sueldos)
+result[min.sueldo,]
+
